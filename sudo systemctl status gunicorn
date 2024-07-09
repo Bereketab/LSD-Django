@@ -1,0 +1,20 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2022-12-24 12:12:41 UTC; 3h 6min ago
+TriggeredBy: ● gunicorn.socket
+   Main PID: 932 (gunicorn)
+      Tasks: 4 (limit: 19168)
+     Memory: 114.9M
+     CGroup: /system.slice/gunicorn.service
+             ├─ 932 /var/www/ld/ld_venv/bin/python /var/www/ld/ld_venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/www/ld/DjangoGEE/DjangoGEE.sock DjangoGEE.wsgi:application
+             ├─1372 /var/www/ld/ld_venv/bin/python /var/www/ld/ld_venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/www/ld/DjangoGEE/DjangoGEE.sock DjangoGEE.wsgi:application
+             ├─1373 /var/www/ld/ld_venv/bin/python /var/www/ld/ld_venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/www/ld/DjangoGEE/DjangoGEE.sock DjangoGEE.wsgi:application
+             └─1374 /var/www/ld/ld_venv/bin/python /var/www/ld/ld_venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/www/ld/DjangoGEE/DjangoGEE.sock DjangoGEE.wsgi:application
+
+Dec 24 12:12:41 ld-server systemd[1]: Started gunicorn daemon.
+Dec 24 12:12:42 ld-server gunicorn[932]: [2022-12-24 12:12:42 +0000] [932] [INFO] Starting gunicorn 20.1.0
+Dec 24 12:12:42 ld-server gunicorn[932]: [2022-12-24 12:12:42 +0000] [932] [INFO] Listening at: unix:/var/www/ld/DjangoGEE/DjangoGEE.sock (932)
+Dec 24 12:12:42 ld-server gunicorn[932]: [2022-12-24 12:12:42 +0000] [932] [INFO] Using worker: sync
+Dec 24 12:12:42 ld-server gunicorn[1372]: [2022-12-24 12:12:42 +0000] [1372] [INFO] Booting worker with pid: 1372
+Dec 24 12:12:42 ld-server gunicorn[1373]: [2022-12-24 12:12:42 +0000] [1373] [INFO] Booting worker with pid: 1373
+Dec 24 12:12:42 ld-server gunicorn[1374]: [2022-12-24 12:12:42 +0000] [1374] [INFO] Booting worker with pid: 1374
